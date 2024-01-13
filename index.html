@@ -15,26 +15,28 @@
     <link rel="stylesheet" href="style.css" />
 </head>
 
-<body class="container-fluid border-top-2 border-secondary">
+<body class="container-fluid m-0">
+
     <!-- partie titre -->
-    <header id="bandeau" class="">
-        <!-- comment changer la couleur du bandeau >sm??? -->
-        <div id="titreFlex"
-            class="border-top border-5 border-secondary d-sm-flex text-center justify-content-center align-items-end ">
-            <h5 class="text-capitalize">magazine en ligne</h5>
-            <h1 class="text-uppercase px-3">interiors</h1>
-            <h5 class="text-capitalize">nos meilleures idées</h5>
+    <header id="bandeau" class="border-top border-4 border-secondary">
+        <div class="d-sm-flex justify-content-center align-items-end text-center py-1">
+            <!-- comment aligner en bas tout ça? -->
+            <p class="titreFlex text-capitalize small">magazine en ligne</p>
+            <p class="titreFlex h1 text-uppercase px-2">interiors</p>
+            <p class="titreFlex text-capitalize small">nos meilleurs idées</p>
+
+
         </div>
         <!-- nav -->
-        <nav class="navbar navbar-expand-sm border border-2 bg-light justify-content-center ">
+        <nav class="navbar navbar-expand-md border border-2 bg-light justify-content-around my-2">
             <!-- burger -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#monMenu">
                 <i class="fa-solid fa-bars"></i>
             </button>
             <!-- mais pourquoi je n'arrive pas à bien placer mes liens de nav? -->
             <div class="collapse navbar-collapse justify-content-center" id="monMenu">
-                <ul class="navbar-nav text-uppercase">
-                    <li class="nav-item"><a class="nav-link active" href="index.html">O1.Accueil</a></li>
+                <ul class="navbar-nav text-uppercase ">
+                    <li class="nav-item"><a href="index.html" class="nav-link active">O1.Accueil</a></li>
                     <li class="nav-item"><a href="#" class="nav-link">O2.à propos</a></li>
                     <li class="nav-item"><a href="#" class="nav-link">O3.services</a></li>
                     <li class="nav-item"><a href="#" class="nav-link">O4.galerie</a></li>
@@ -49,47 +51,46 @@
     <main id="contenu">
 
         <!-- slider -->
-        <section id="slider" class="position-relative d-none d-sm-block">
+        <article id="slider" class="position-relative d-none d-sm-block">
             <!-- comment positionner l'encart sur l'image? -->
             <div class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active ">
-                        <img class="g-0 img-fluid pt-3 " src="images/chambre-rose.jpg" alt="chambre rose">
+                        <img class="g-0 img-fluid" src="images/chambre-rose.jpg" alt="chambre rose">
                     </div>
                     <div class="carousel-item active">
-                        <img class="g-0 img-fluid pt-3 " src="images/chambre-blanche.jpg" alt="chambre blanche">
+                        <img class="g-0 img-fluid" src="images/chambre-blanche.jpg" alt="chambre blanche">
                     </div>
                     <div class="carousel-item active">
-                        <img class="g-0 img-fluid pt-3 " src="images/cuisine.jpg" alt="cuisine">
+                        <img class="g-0 img-fluid " src="images/cuisine.jpg" alt="cuisine">
                     </div>
                     <div class="carousel-item active">
-                        <img class="g-0 img-fluid pt-3 " src="images/chaises.jpg" alt="chaises">
+                        <img class="g-0 img-fluid " src="images/chaises.jpg" alt="chaises">
                     </div>
                 </div>
             </div>
             <!-- texte sur slider -->
-            <div class="position-absolute-bottom">
-                <p class="text-uppercase bg-secondary bg-gradient text-light text-center py-2">pour trouver <span
+            <!-- attention, , le container-fluid n'est pas la bonne solution pour remplir la largeur de son container -->
+            <div id="sliderTexte" class="position-absolute container-fluid g-0">
+                <p class=" text-uppercase bg-secondary opacity-75 text-light text-center py-2">pour trouver <span
                         class="h2">les meilleures</span> solutions...</p>
             </div>
-        </section>
+        </article>
 
-        <figure id="enAvantTitre" class="pt-5 border-top border-4 z-index-2">
-            <!-- comment superposer titre à border-top?  -->
-            <div class="z-index-0">
-                <p class="text-uppercase fw-bold bg-white text-center">nouvelle collection</p>
-            </div>
+        <article id="enAvantTitre">
 
 
-            <div class="row">
-                <div class="bg-light col"></div>
-                <p class="col text-uppercase fw-bold bg-white text-center">nouvelle collection</p>
-                <div class="col bg-light"></div>
-            </div>
+
+
+
+            <div id="titre1" class="titreBarres text-uppercase fw-bold text-center py-3"> nouvelle collection </div>
+
+
+
 
             <!-- Articles en avant -->
-            <div id="enAvant" class="row row-cols-2 row-cols-sm-4">
-                <a href="#" class="text-decoration-none text-dark pb-3">
+            <figure id="enAvant" class="row row-cols-2 row-cols-md-4 m-auto">
+                <a href="#" class="text-decoration-none text-dark">
                     <div class="col bg-light border">
                         <div class="body">
                             <h5 class="card-title fw-bold text-uppercase text-center p-2">chambres</h5>
@@ -122,77 +123,80 @@
                             alt="salle de bain">
                     </div>
                 </a>
-            </div>
+            </figure>
 
-        </figure>
-
-        <article id="info" class="row row-cols-sm-3">
+        </article>
 
 
-            <!-- comment mettre le titre sur la barre? :: before and ::after en css??-->
-            <div class="relative">
-                <div class=" absolute z-index-1 border-top border-3 relative"></div>
-                <h6 class="absolute z-index-2 text-capitalize fw-bold bg-white text-center px-2"><small>dernière
-                        news</small></h6>
-            </div>
+        <section id="info" class="d-md-flex">
 
-            <!-- bloc +d'infos -->
-            <!-- comment mettre de l'espace entre les deux? -->
-            <div class="d-flex flex-md-column">
-                <div class="col border border-3 bg-light p-3">
-                    <div class="body">
+            <aside id="bloc1">
+                <div class=" titreBarres text-capitalize fw-bold w-100 py-3"> dernières news </div>
+                <!-- bloc +d'infos, col 1-->
+                <!-- comment mettre de l'espace entre les deux? -->
+                <div class="d-flex flex-md-column justify-content-between">
+                    <div id="news1" class="border border-3 bg-light p-3">
                         <p class="text-uppercase">21 octobre 2020</p>
-                        <p class="lead">Découvrez notre collection Lodge et ses différents éléments modulables et
+                        <p class="lead">Découvrez notre collection Lodge et ses différents éléments
+                            modulables et
                             créez
                             ainsi votre combinaison!.</p>
-                        <a href="#" class="text-uppercase text-decoration-none text-dark text-right">+ d'infos</a>
+                        <!-- comment aligner les + d'infos à droite? -->
+                        <a href="#" class="text-uppercase text-decoration-none text-dark"><p class="text-end">+d'infos</p></a>
+                    </div>
+                    <div id="news2" class="border border-3 bg-light p-3">
+                        <p class="text-uppercase">21 octobre 2020</p>
+                        <p class="lead">Découvrez notre collection Lodge et ses différents éléments
+                            modulables et créez
+                            ainsi votre combinaison!.</p>
+                        <a href="#" class="text-uppercase text-decoration-none text-dark"><p class="text-end">+ d'infos</p></a>
                     </div>
                 </div>
-                <div class="col border border-3 bg-light p-3">
-                    <p class="text-uppercase">21 octobre 2020</p>
-                    <p class="lead">Découvrez notre collection Lodge et ses différents éléments modulables et créez
-                        ainsi votre combinaison!.</p>
-                    <a href="#" class="text-uppercase text-decoration-none text-dark text-right">+ d'infos</a>
-                </div>
-            </div>
+            </aside>
 
             <!-- bloc de texte avec liens, col 2 -->
-            <div class="row">
+            <aside id="bloc2" class="row py-4 justify-content-around">
 
-                <div class="col">
-                    <p>Quelques mots sur notre société</p>
+                <div id="mots" class="col-7">
+                    <h5 class="fw-bold">Quelques mots sur notre société</h5>
                     <p>Découvrez notre sélection de meubles contemporains et de mobilier moderne et design pour
-                        aménager votre intérieur. Plus
-                        de 10,000 objets deco et design en vente.</p>
-                    <p>> Préparer vos cadeaux et vous faire plaisir avec des milliers de produits disponibles et
+                        aménager votre intérieur. Plus de 10,000 objets deco et design en vente.</p>
+                    <p class="small py-2">> Préparer vos cadeaux et vous faire plaisir avec des milliers de produits
+                        disponibles et
                         livrés chez vous en 24/48h !</p>
-                    <p>> Noël 2021 est déjà là! Célébrez un Noël design avec notre sélection d'idées de cadeaux
+                    <p class="small py-2">> Noël 2021 est déjà là! Célébrez un Noël design avec notre sélection
+                        d'idées de cadeaux
                         originales et insolites.
-                        Découvrez notre sélection d'objets ludiques et insolites et faites le plein d'idées !</p>
-                    <a href="#" class="text-uppercase text-decoration-none text-dark text-right">+ d'infos</a>
+                        Découvrez notre sélection d'objets ludiques et insolites et faites le plein d'idées !
+                    </p>
+                    <a href="#"
+                        class="text-uppercase text-decoration-none text-dark text-right border border-2 px-2 py-1 rounded">+
+                        d'infos</a>
                 </div>
 
-                <!-- bloc col 3 -->
-                <div id="resa" class="col d-flex flex-column">
-                    <p class="text-uppercase">reservez notre catalogue</p>
-                    <a href="#" class="absolute text-decoration-none text-light fw-bold small" data-bs-toggle="modal"
-                        data-bs-target="#boiteModale">Cliquez ICI</a>
+                <!-- bloc réservation -->
+                <div id="resa" class="col-4 g-0 position-relative">
 
+                    <p class="text-uppercase  fw-bold p-2">reservez <br> notre <br>catalogue</p>
+                    <a id="clic" href="#" class=" text-decoration-none text-light fw-bold small position-absolute" data-bs-toggle="modal"
+                        data-bs-target="#boiteModale">Cliquez <br>ICI</a>
 
-
+                    <div id="resaListe">
+                        <ul class="list-unstyled mx-2">
+                            <li class="fw-bold py-2">Références</li>
+                            <li class="small">Expositions</li>
+                            <li class="small">Hôtels</li>
+                            <li class="small">Restaurants et Bars</li>
+                            <li class="small">Revente</li>
+                            <li class="small">Salons et Spas</li>
+                        </ul>
+                    </div>
                 </div>
-                <ul class="">
-                    <li>Références</li>
-                    <li>Expositions</li>
-                    <li>Hôtels</li>
-                    <li>Restaurants et Bars</li>
-                    <li>Revente</li>
-                    <li>Salons et Spas</li>
-                </ul>
-            </div>
 
-            <div id="" class="row"></div>
-        </article>
+            </aside>
+
+
+        </section>
 
 
     </main>
@@ -225,7 +229,7 @@
                             <input type="email" class="form-control" name="email" id="email" placeholder="Votre email">
                         </div>
                         <div class="form-check mb-3 mt-3">
-                            <input class="form-check-input" type="checkbox">
+                            <input class="form-check-input" type="checkbox" checked>
                             <label class="form-check-label">J'accepte de recevoir le catalogue</label>
                         </div>
                         <div class="mb-3 mt-3">
