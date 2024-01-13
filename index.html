@@ -1,21 +1,246 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interiors</title>
     <!-- icones fontawesome-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-  integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
-  crossorigin="anonymous" referrerpolicy="no-referrer" />
-<!-- Bootstrap CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" />
-<!-- mon style CSS -->
-<link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" />
+    <!-- mon style CSS -->
+    <link rel="stylesheet" href="style.css" />
 </head>
-<body>
-    
+
+<body class="container-fluid border-top-2 border-secondary">
+    <!-- partie titre -->
+    <header id="bandeau" class="">
+        <!-- comment changer la couleur du bandeau >sm??? -->
+        <div id="titreFlex"
+            class="border-top border-5 border-secondary d-sm-flex text-center justify-content-center align-items-end ">
+            <h5 class="text-capitalize">magazine en ligne</h5>
+            <h1 class="text-uppercase px-3">interiors</h1>
+            <h5 class="text-capitalize">nos meilleures idées</h5>
+        </div>
+        <!-- nav -->
+        <nav class="navbar navbar-expand-sm border border-2 bg-light justify-content-center ">
+            <!-- burger -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#monMenu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <!-- mais pourquoi je n'arrive pas à bien placer mes liens de nav? -->
+            <div class="collapse navbar-collapse justify-content-center" id="monMenu">
+                <ul class="navbar-nav text-uppercase">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">O1.Accueil</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">O2.à propos</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">O3.services</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">O4.galerie</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">O5.les news</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">O6.contact</a></li>
+                </ul>
+            </div>
+        </nav>
+
+    </header>
+
+    <main id="contenu">
+
+        <!-- slider -->
+        <section id="slider" class="position-relative d-none d-sm-block">
+            <!-- comment positionner l'encart sur l'image? -->
+            <div class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active ">
+                        <img class="g-0 img-fluid pt-3 " src="images/chambre-rose.jpg" alt="chambre rose">
+                    </div>
+                    <div class="carousel-item active">
+                        <img class="g-0 img-fluid pt-3 " src="images/chambre-blanche.jpg" alt="chambre blanche">
+                    </div>
+                    <div class="carousel-item active">
+                        <img class="g-0 img-fluid pt-3 " src="images/cuisine.jpg" alt="cuisine">
+                    </div>
+                    <div class="carousel-item active">
+                        <img class="g-0 img-fluid pt-3 " src="images/chaises.jpg" alt="chaises">
+                    </div>
+                </div>
+            </div>
+            <!-- texte sur slider -->
+            <div class="position-absolute-bottom">
+                <p class="text-uppercase bg-secondary bg-gradient text-light text-center py-2">pour trouver <span
+                        class="h2">les meilleures</span> solutions...</p>
+            </div>
+        </section>
+
+        <figure id="enAvantTitre" class="pt-5 border-top border-4 z-index-2">
+            <!-- comment superposer titre à border-top?  -->
+            <div class="z-index-0">
+                <p class="text-uppercase fw-bold bg-white text-center">nouvelle collection</p>
+            </div>
+
+
+            <div class="row">
+                <div class="bg-light col"></div>
+                <p class="col text-uppercase fw-bold bg-white text-center">nouvelle collection</p>
+                <div class="col bg-light"></div>
+            </div>
+
+            <!-- Articles en avant -->
+            <div id="enAvant" class="row row-cols-2 row-cols-sm-4">
+                <a href="#" class="text-decoration-none text-dark pb-3">
+                    <div class="col bg-light border">
+                        <div class="body">
+                            <h5 class="card-title fw-bold text-uppercase text-center p-2">chambres</h5>
+                        </div>
+                        <img src="images/vignette-chambre.jpg" class="card-img-top p-2 border-top" alt="chambre bleue">
+                    </div>
+                </a>
+                <a href="#" class="text-decoration-none text-dark">
+                    <div class="col bg-light border">
+                        <div class="body">
+                            <h5 class="card-title fw-bold text-uppercase text-center p-2">cuisines</h5>
+                        </div>
+                        <img src="images/vignette-cuisine.jpg" class="card-img-top p-2 border-top" alt="cuisine">
+                    </div>
+                </a>
+                <a href="#" class="text-decoration-none text-dark">
+                    <div class=" col bg-light border">
+                        <div class="body">
+                            <h5 class="card-title fw-bold text-uppercase text-center p-2">salons</h5>
+                        </div>
+                        <img src="images/vignette-fauteuil.jpg" class="card-img-top p-2 border-top" alt="salon">
+                    </div>
+                </a>
+                <a href="#" class="text-decoration-none text-dark">
+                    <div class="col bg-light border">
+                        <div class="body">
+                            <h5 class="card-title fw-bold text-uppercase text-center p-2">bains</h5>
+                        </div>
+                        <img src="images/vignette-sallebain.jpg" class="card-img-top p-2 border-top"
+                            alt="salle de bain">
+                    </div>
+                </a>
+            </div>
+
+        </figure>
+
+        <article id="info" class="row row-cols-sm-3">
+
+
+            <!-- comment mettre le titre sur la barre? :: before and ::after en css??-->
+            <div class="relative">
+                <div class=" absolute z-index-1 border-top border-3 relative"></div>
+                <h6 class="absolute z-index-2 text-capitalize fw-bold bg-white text-center px-2"><small>dernière
+                        news</small></h6>
+            </div>
+
+            <!-- bloc +d'infos -->
+            <!-- comment mettre de l'espace entre les deux? -->
+            <div class="d-flex flex-md-column">
+                <div class="col border border-3 bg-light p-3">
+                    <div class="body">
+                        <p class="text-uppercase">21 octobre 2020</p>
+                        <p class="lead">Découvrez notre collection Lodge et ses différents éléments modulables et
+                            créez
+                            ainsi votre combinaison!.</p>
+                        <a href="#" class="text-uppercase text-decoration-none text-dark text-right">+ d'infos</a>
+                    </div>
+                </div>
+                <div class="col border border-3 bg-light p-3">
+                    <p class="text-uppercase">21 octobre 2020</p>
+                    <p class="lead">Découvrez notre collection Lodge et ses différents éléments modulables et créez
+                        ainsi votre combinaison!.</p>
+                    <a href="#" class="text-uppercase text-decoration-none text-dark text-right">+ d'infos</a>
+                </div>
+            </div>
+
+            <!-- bloc de texte avec liens, col 2 -->
+            <div class="row">
+
+                <div class="col">
+                    <p>Quelques mots sur notre société</p>
+                    <p>Découvrez notre sélection de meubles contemporains et de mobilier moderne et design pour
+                        aménager votre intérieur. Plus
+                        de 10,000 objets deco et design en vente.</p>
+                    <p>> Préparer vos cadeaux et vous faire plaisir avec des milliers de produits disponibles et
+                        livrés chez vous en 24/48h !</p>
+                    <p>> Noël 2021 est déjà là! Célébrez un Noël design avec notre sélection d'idées de cadeaux
+                        originales et insolites.
+                        Découvrez notre sélection d'objets ludiques et insolites et faites le plein d'idées !</p>
+                    <a href="#" class="text-uppercase text-decoration-none text-dark text-right">+ d'infos</a>
+                </div>
+
+                <!-- bloc col 3 -->
+                <div id="resa" class="col d-flex flex-column">
+                    <p class="text-uppercase">reservez notre catalogue</p>
+                    <a href="#" class="absolute text-decoration-none text-light fw-bold small" data-bs-toggle="modal"
+                        data-bs-target="#boiteModale">Cliquez ICI</a>
+
+
+
+                </div>
+                <ul class="">
+                    <li>Références</li>
+                    <li>Expositions</li>
+                    <li>Hôtels</li>
+                    <li>Restaurants et Bars</li>
+                    <li>Revente</li>
+                    <li>Salons et Spas</li>
+                </ul>
+            </div>
+
+            <div id="" class="row"></div>
+        </article>
+
+
+    </main>
+
+    <footer id="pied" class="border-top border-2 d-flex justify-content-between">
+        <div id="reseaux">
+            <a href="#"><i class="fa-brands fa-square-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-square-pinterest"></i></a>
+        </div>
+        <div id="copyright" class="small">&copy;GBS - INTERIORS 2023</div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- boite modale -->
+    <div class="modal" id="boiteModale">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <p class="modal-title">Réserver son catalogue</p>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <form action="/action_page.php" class="container ">
+                        <div class="mb-3 mt-3">
+                            <label for="email" class="form-label">Adresse email</label>
+                            <input type="email" class="form-control" name="email" id="email" placeholder="Votre email">
+                        </div>
+                        <div class="form-check mb-3 mt-3">
+                            <input class="form-check-input" type="checkbox">
+                            <label class="form-check-label">J'accepte de recevoir le catalogue</label>
+                        </div>
+                        <div class="mb-3 mt-3">
+                            <input class="btn btn-success" type="submit" value="OK">
+                        </div>
+                    </form>
+                </div>
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Fermer</button>
+                </div>
+            </div>
+        </div>
 </body>
+
 </html>
 
 <!-- X-Small 	None 	<576px
