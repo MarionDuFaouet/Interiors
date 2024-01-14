@@ -18,38 +18,33 @@
 <body class="container-fluid m-0">
 
     <!-- partie titre -->
-    <header id="bandeau" class="border-top border-4 border-secondary">
+    <header id="bandeau" class="border-top border-5 border-secondary">
         <div class="d-sm-flex justify-content-center align-items-end text-center py-1">
             <!-- comment aligner en bas tout ça? -->
             <p class="titreFlex text-capitalize small">magazine en ligne</p>
             <p class="titreFlex h1 text-uppercase px-2">interiors</p>
             <p class="titreFlex text-capitalize small">nos meilleurs idées</p>
-
-
         </div>
         <!-- nav -->
-        <nav class="navbar navbar-expand-md border border-2 bg-light justify-content-around my-2">
+        <nav class="navbar navbar-expand-md border border-2 bg-light my-2 justify-content-center">
             <!-- burger -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#monMenu">
                 <i class="fa-solid fa-bars"></i>
             </button>
-            <!-- mais pourquoi je n'arrive pas à bien placer mes liens de nav? -->
-            <div class="collapse navbar-collapse justify-content-center" id="monMenu">
-                <ul class="navbar-nav text-uppercase ">
-                    <li class="nav-item"><a href="index.html" class="nav-link active">O1.Accueil</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">O2.à propos</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">O3.services</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">O4.galerie</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">O5.les news</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">O6.contact</a></li>
+            <div class="collapse navbar-collapse justify-content-around " id="monMenu">
+                <ul class="navbar-nav text-uppercase">
+                    <li class="nav-item px-2"><a href="index.html" class="nav-link active fw-bold">O1.<span class="text-body">Accueil</span></a></li>
+                    <li class="nav-item px-2"><a href="#" class="nav-link">O2.<span class="text-body">à propos</span></a></li>
+                    <li class="nav-item px-2"><a href="#" class="nav-link">O3.<span class="text-body">services</span></a></li>
+                    <li class="nav-item px-2"><a href="#" class="nav-link">O4.<span class="text-body">galerie</span></a></li>
+                    <li class="nav-item px-2"><a href="#" class="nav-link">O5.<span class="text-body">les news</span></a></li>
+                    <li class="nav-item px-2"><a href="#" class="nav-link">O6.<span class="text-body">contact</span></a></li>
                 </ul>
             </div>
         </nav>
-
     </header>
 
     <main id="contenu">
-
         <!-- slider -->
         <article id="slider" class="position-relative d-none d-sm-block">
             <!-- comment positionner l'encart sur l'image? -->
@@ -70,26 +65,16 @@
                 </div>
             </div>
             <!-- texte sur slider -->
-            <!-- attention, , le container-fluid n'est pas la bonne solution pour remplir la largeur de son container -->
             <div id="sliderTexte" class="position-absolute container-fluid g-0">
                 <p class=" text-uppercase bg-secondary opacity-75 text-light text-center py-2">pour trouver <span
                         class="h2">les meilleures</span> solutions...</p>
             </div>
         </article>
 
-        <article id="enAvantTitre">
-
-
-
-
-
-            <div id="titre1" class="titreBarres text-uppercase fw-bold text-center py-3"> nouvelle collection </div>
-
-
-
-
+        <article id="enAvant">
             <!-- Articles en avant -->
-            <figure id="enAvant" class="row row-cols-2 row-cols-md-4 m-auto">
+            <div id="titre1" class=" text-uppercase fw-bolder text-center py-3">nouvelle collection</div>
+            <figure class="row row-cols-2 row-cols-md-4 m-auto">
                 <a href="#" class="text-decoration-none text-dark">
                     <div class="col bg-light border">
                         <div class="body">
@@ -124,16 +109,13 @@
                     </div>
                 </a>
             </figure>
-
         </article>
 
-
+        <!-- section en bas -->
         <section id="info" class="d-md-flex">
-
+            <!-- bloc +d'infos, col 1-->
             <aside id="bloc1">
-                <div class=" titreBarres text-capitalize fw-bold w-100 py-3"> dernières news </div>
-                <!-- bloc +d'infos, col 1-->
-                <!-- comment mettre de l'espace entre les deux? -->
+                <div id="titre2" class=" text-capitalize fw-bolder text-center py-3">dernières news</div>
                 <div class="d-flex flex-md-column justify-content-between">
                     <div id="news1" class="border border-3 bg-light p-3">
                         <p class="text-uppercase">21 octobre 2020</p>
@@ -141,22 +123,25 @@
                             modulables et
                             créez
                             ainsi votre combinaison!.</p>
-                        <!-- comment aligner les + d'infos à droite? -->
-                        <a href="#" class="text-uppercase text-decoration-none text-dark"><p class="text-end">+d'infos</p></a>
+                        <a href="#" class="text-uppercase text-decoration-none text-dark">
+                            <p class="text-end">+d'infos</p>
+                        </a>
                     </div>
                     <div id="news2" class="border border-3 bg-light p-3">
                         <p class="text-uppercase">21 octobre 2020</p>
                         <p class="lead">Découvrez notre collection Lodge et ses différents éléments
                             modulables et créez
                             ainsi votre combinaison!.</p>
-                        <a href="#" class="text-uppercase text-decoration-none text-dark"><p class="text-end">+ d'infos</p></a>
+                        <a href="#" class="text-uppercase text-decoration-none text-dark">
+                            <p class="text-end">+ d'infos</p>
+                        </a>
                     </div>
                 </div>
             </aside>
 
-            <!-- bloc de texte avec liens, col 2 -->
+            <!-- bloc de texte avec liens +résa, col 2 -->
             <aside id="bloc2" class="row py-4 justify-content-around">
-
+                <!-- bloc texte et liens -->
                 <div id="mots" class="col-7">
                     <h5 class="fw-bold">Quelques mots sur notre société</h5>
                     <p>Découvrez notre sélection de meubles contemporains et de mobilier moderne et design pour
@@ -178,8 +163,8 @@
                 <div id="resa" class="col-4 g-0 position-relative">
 
                     <p class="text-uppercase  fw-bold p-2">reservez <br> notre <br>catalogue</p>
-                    <a id="clic" href="#" class=" text-decoration-none text-light fw-bold small position-absolute" data-bs-toggle="modal"
-                        data-bs-target="#boiteModale">Cliquez <br>ICI</a>
+                    <a id="clic" href="#" class=" text-decoration-none text-light fw-bold small position-absolute"
+                        data-bs-toggle="modal" data-bs-target="#boiteModale">Cliquez <br>ICI</a>
 
                     <div id="resaListe">
                         <ul class="list-unstyled mx-2">
@@ -192,13 +177,8 @@
                         </ul>
                     </div>
                 </div>
-
             </aside>
-
-
         </section>
-
-
     </main>
 
     <footer id="pied" class="border-top border-2 d-flex justify-content-between">
