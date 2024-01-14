@@ -35,15 +35,27 @@ p {
     bottom: -16px;
 }
 
-.titreBarres::before,
-.titreBarres::after {
-    display: inline-block;
-    vertical-align: middle;
-    height: 3px;
-    width: 100px;
-    background: #DEE2E6;
-    content: "";
+#titre1,
+#titre2 {
+    display: flex;
+    font-family: 'antipasto_pro_regular';
+  }
+  
+#titre1::before,
+#titre1::after,
+#titre2::before,
+#titre2::after {
+  content: "";
+  flex:1;
+  align-self: center;
+  border-bottom: 3px solid #DEE2E6;
 }
+
+#titre1::before {margin-right: .3em}
+#titre1::after {margin-left: .3em}
+
+#titre2::before {margin-right: .3em}
+#titre2::after {margin-left: .3em}
 
 #enAvant a{
     padding-bottom: 16px;
@@ -54,7 +66,6 @@ p {
     height: 100vh;
     position: relative;
 }
-
 
 /* je ne sais pas pourquoi, mais la class 
 absolute et les top, left et width ne fonctionnent pas avec bootstrap */
