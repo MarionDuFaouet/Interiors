@@ -6,11 +6,7 @@
     font-style: normal;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5 {
+h*{
     font-family: 'antipasto_pro_regular';
 }
 
@@ -49,43 +45,29 @@ p {
   flex:1;
   align-self: center;
   border-bottom: 3px solid #DEE2E6;
+  margin: 0 .3em;
 }
-
-#titre1::before {margin-right: .3em}
-#titre1::after {margin-left: .3em}
-
-#titre2::before {margin-right: .3em}
-#titre2::after {margin-left: .3em}
 
 #enAvant a{
     padding-bottom: 16px;
 }
-#resa {
-    background-image: url(images/fond-book.png);
-    background-repeat: no-repeat;
-    height: 100vh;
-    position: relative;
-}
 
-/* je ne sais pas pourquoi, mais la class 
-absolute et les top, left et width ne fonctionnent pas avec bootstrap */
-#resa{
-    width: 40%;
+#resaTexte{
+    top: 10px;
+    left: 15px;
 }
 
 #clic{
-    top: 135px;
-    left: 20px;
+    top: 178px;
+    left: 15px; 
 }
-
 
 #mots{
     width: 50%;
 }
 
 #resaListe{
-    position: absolute;
-    top: 210px;
+    top:300px;
 }
 
 #news1, #news2 {
@@ -103,5 +85,3 @@ absolute et les top, left et width ne fonctionnent pas avec bootstrap */
         margin-right: 20px;
     }
 }
-
-/* ...et pourquoi j'ai ce grand espace vide en fin de main??? */
