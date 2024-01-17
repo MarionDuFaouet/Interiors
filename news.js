@@ -4,7 +4,7 @@ let ajax = new Promise((resolve, reject) => {
     // XMLHttpRequest est une api!!! Appelée plus couramment XHR
     let request = new XMLHttpRequest();
     //initialisation requête.
-    request.open("GET", "https://www.tbads.eu/greta/kercode/ajax/?article=x");
+    request.open("GET", "https://www.tbads.eu/greta/kercode/ajax/?article=3");
     //répond en format json
     request.responseType = "json";
     //ajoute un écouteur d'événement à request
@@ -21,6 +21,8 @@ let ajax = new Promise((resolve, reject) => {
     }, false);
     // ...envoie la requête
     request.send();
+    //affiche dans la console mon objet json récupéré
+    console.log(request.response)
 });
 
 
@@ -35,15 +37,28 @@ ajax.then(function (response) {
     });
 
 // remplace les données de mon html par les données json
+// function contenu(jsonObj) {
+//     //récupère mes éléments html
+//     let myTitle = document.querySelector("#title");
+//     let myDate = document.querySelector("#date");
+//     let myContent = document.querySelector("#content");
+//     let myPicture = document.querySelector("#picture");
+
+//     myTitle.textContent = jsonObj["title"];
+//     myDate.textContent = jsonObj["date"];
+//     myContent.textContent = jsonObj["content"];
+//     myPicture.textContent = jsonObj["picture"];
+// }
+
 function contenu(jsonObj) {
     //récupère mes éléments html
-    let myTitle = document.querySelector["#title"];
-    let myDate = document.querySelector["#date"];
-    let myContent = document.querySelector["#content"];
-    let myPicture = document.querySelector["#picture"];
-
+    let myTitle = document.querySelector("#title");
+    let myDate = document.querySelector("#date");
+    let myContent = document.querySelector("#content");
+    let myPicture = document.querySelector("#picture");
+    //remplace le contenu de mes variables par du contenu de mon json
     myTitle.textContent = jsonObj["title"];
-    myDate.textContent = jsonObj["date"];
+    myDate.textContent = jsonObj["date"][0];
     myContent.textContent = jsonObj["content"];
     myPicture.textContent = jsonObj["picture"];
 }
