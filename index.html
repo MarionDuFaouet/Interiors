@@ -126,35 +126,32 @@
             <aside id="bloc1">
                 <div id="titre2" class=" text-capitalize fw-bolder text-center py-3">dernières news</div>
                 <div class="d-flex flex-md-column justify-content-between">
-                    <div id="news1" class="border border-3 bg-light p-3">
-                        <p class="text-uppercase">21 octobre 2020</p>
-                        <p class="lead">Découvrez notre collection Lodge et ses différents éléments
-                            modulables et
-                            créez
-                            ainsi votre combinaison!.</p>
 
+                    <div id="news1" class="border border-3 bg-light p-3">
+                        <p class=" text-uppercase">21 octobre 2020</p>
+                        <p class=" lead ">Découvrez notre collection Lodge et ses différents éléments
+                            modulables et créez ainsi votre combinaison!.</p>
                         <a id="clicNews" href="#" class="text-uppercase text-decoration-none text-dark"
                             data-bs-toggle="modal" data-bs-target="#boiteModaleNews1">
                             <p class="text-end">+ d'infos</p>
                         </a>
-
-
-
                     </div>
+
                     <div id="news2" class="border border-3 bg-light p-3">
                         <p class="text-uppercase">21 octobre 2020</p>
                         <p class="lead">Découvrez notre collection Lodge et ses différents éléments
-                            modulables et créez
-                            ainsi votre combinaison!.</p>
+                            modulables et créez ainsi votre combinaison!.</p>
                         <a id="clicNews" href="#" class="text-uppercase text-decoration-none text-dark"
                             data-bs-toggle="modal" data-bs-target="#boiteModaleNews2">
                             <p class="text-end">+ d'infos</p>
                         </a>
                     </div>
+
                 </div>
             </aside>
 
             <!-- bloc de texte avec liens +résa, col 2 -->
+            <!-- pour afficher le même titre, texte et date, class css text-overflow: ellipsis ??? -->
             <aside id="bloc2" class="row py-4 justify-content-around">
                 <!-- bloc texte et liens -->
                 <div id="mots" class="col-7">
@@ -176,15 +173,15 @@
 
                 <!-- bloc réservation -->
                 <div id="resa" class="col-4 g-0 position-relative">
-                        <img src="images/fond-book.png" class="img-fluid">
-                        <div id="resaTexte" class="position-absolute">
-                            <p  class="text-uppercase fw-bold p-2">reservez <br> notre
-                                <br>catalogue
-                            </p>
-                            <a id="clic" href="#" class=" text-decoration-none text-light fw-bold small position-absolute"
-                                data-bs-toggle="modal" data-bs-target="#boiteModale">Cliquez <br>ICI</a>
-                        </div>
-                        
+                    <img src="images/fond-book.png" class="img-fluid">
+                    <div id="resaTexte" class="position-absolute">
+                        <p class="text-uppercase fw-bold p-2">reservez <br> notre
+                            <br>catalogue
+                        </p>
+                        <a id="clic" href="#" class=" text-decoration-none text-light fw-bold small position-absolute"
+                            data-bs-toggle="modal" data-bs-target="#boiteModale">Cliquez <br>ICI</a>
+                    </div>
+
                     <div id="resaListe">
                         <ul class="list-unstyled mx-2">
                             <li class="fw-bold py-2"><a href="#" class="text-decoration-none text-dark">Références</a>
@@ -253,22 +250,21 @@
             <div class="modal-content">
                 <!-- Modal Header -->
                 <div class="modal-header">
-                    <h2 class="modal-title" id="title">ma news un</h2>
+                    <h2 class="modal-title" id="title"></h2>
                     <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                 </div>
                 <!-- Modal body -->
-                <div class="modal-body d-flex justify-content-between">
+                <div class="modal-body">
                     <div id="texteNews">
-                        <p id="date">../../..</p>
-                        <p id="content" class="">Lorem ipsum dolor sit amet.</p>
+                        <p class="date text-uppercase"></p>
+                        <p class="content" class=""></p>
                     </div>
-                    <img id="picture" src="images/chambre-blanche.jpg" alt="chambre-blanche" class="w-50">
+                    <img id="picture" src="" alt="cfgk" class="w-50">
                 </div>
             </div>
-
         </div>
     </div>
-    </div>
+
 
     <!-- boites modales news2 -->
     <div class="modal" id="boiteModaleNews2">
@@ -277,20 +273,21 @@
                 <div class="modal-content">
                     <!-- Modal Header -->
                     <div class="modal-header">
-                        <h2 class="modal-title">ma news deux</h2>
+                        <h2 class="modal-title" id="titleBis"></h2>
                         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                     </div>
                     <!-- Modal body -->
-                    <div class="modal-body d-flex justify-content-between">
+                    <div class="modal-body">
                         <div id="texteNews">
-                            <p id="date">../../..</p>
-                            <p id="content" class="">Lorem ipsum dolor sit amet.</p>
+                            <p id="dateBis"></p>
+                            <p id="contentBis" class=""></p>
                         </div>
-                        <img id="picture" src="images/chambre-blanche.jpg" alt="chambre-blanche" class="w-50">
+                        <img id="pictureBis" src="" alt="cfgk" class="w-50">
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
 
 </body>
