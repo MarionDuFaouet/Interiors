@@ -16,6 +16,7 @@ p {
 
 #mots {
     padding-bottom: 40px;
+    width: 60%;
 }
 
 #mots h5,
@@ -45,7 +46,16 @@ p {
   flex:1;
   align-self: center;
   border-bottom: 3px solid #DEE2E6;
-  margin: 0 .3em;
+}
+
+#titre1::before,
+#titre2::before{
+    margin-right: 0.4em;
+}
+
+#titre1::after,
+#titre2::after{
+    margin-left: 0.4em;
 }
 
 #enAvant a{
@@ -57,13 +67,11 @@ p {
     left: 15px;
 }
 
-#clic{
-    top: 126px;
-    left: 8px; 
-}
-
-#mots{
-    width: 50%;
+#resa{
+    background-image: url(images/fond-book.png);
+    background-repeat: no-repeat;
+    /* background-position: ; */
+    /* background-size: ; */
 }
 
 #resaListe{
@@ -84,4 +92,8 @@ p {
     #bloc1 {
         margin-right: 20px;
     }
+    #bloc1 {
+        max-width: 40%;
+    }
 }
+

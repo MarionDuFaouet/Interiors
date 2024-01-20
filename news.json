@@ -12,9 +12,6 @@
     },
     "keyword": ["Mot clé 1", " ... ", " ... "],
     "content": [
-      "Ceci est le premier paragraphe",
-      "Ceci est le deuxième paragraphe",
-      " ... "
-    ],
+      "Ceci est le premier paragraphe", "Ceci est le deuxième paragraphe", " ... "],
     "picture":"https://access.link.to/one/image.jpg"
   }

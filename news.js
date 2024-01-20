@@ -36,19 +36,25 @@ ajax.then(function (response) {
         console.log("Message d'erreur :", msg)
     });
 
-function contenu(jsonObj) {
-    //récupère mes éléments html
-    let myTitle = document.querySelector("#title");
-    let myDate = document.querySelector(".date");
-    let myContent = document.querySelector(".content");
-    let myPicture = document.querySelector("#picture");
-    //image
-    myPicture.setAttribute("src", jsonObj["picture"]);
-    //remplace le contenu de mes variables par du contenu de mon json
-    myTitle.textContent = jsonObj["title"];
-    myDate.textContent = jsonObj["date"]["day"] + ' ' + jsonObj["date"]["month"] + ' ' + jsonObj["date"]["year"];
-    myContent.textContent = jsonObj["content"];
-}
+    function contenu(jsonObj) {
+        //récupère mes éléments html
+        let myTitle = document.querySelector("#title");
+        let myDateNews = document.querySelector("#dateNews");
+        let myDateModale = document.querySelector("#dateModale");
+        let myContentNews = document.querySelector("#contentNews");
+        let myContentModale = document.querySelector("#contentModale");
+        let myPicture = document.querySelector("#picture");
+
+    
+        // injecte contenu json
+        myTitle.textContent = jsonObj["title"]
+        myDateNews.textContent = jsonObj["date"]["day"] + ' ' + jsonObj["date"]["month"] + ' ' + jsonObj["date"]["year"];
+        myDateModale.textContent = jsonObj["date"]["day"] + ' ' + jsonObj["date"]["month"] + ' ' + jsonObj["date"]["year"];
+        myContentNews.textContent = jsonObj["content"][0];
+        myContentModale.textContent = jsonObj["content"][0];
+        myPicture.setAttribute("src", jsonObj["picture"]);
+
+    }
 // ==============================================================================================================
 
 //ARTICLE 2
@@ -88,16 +94,81 @@ ajaxBis.then(function (response) {
         console.log("Message d'erreur :", msg)
     });
 
+
 function contenuBis(jsonObj) {
     //récupère mes éléments html
-    let myTitle = document.querySelector("#titleBis");
-    let myDate = document.querySelector("#dateBis");
-    let myContent = document.querySelector("#contentBis");
+    let myTitleBis = document.querySelector("#titleBis");
+    let myDateNewsBis = document.querySelector("#dateNewsBis");
+    let myDateModaleBis = document.querySelector("#dateModaleBis");
+    let myContentNewsBis = document.querySelector("#contentNewsBis");
+    let myContentModaleBis = document.querySelector("#contentModaleBis");
     let myPictureBis = document.querySelector("#pictureBis");
-    //image
+
+    // injecte contenu json
+    myTitleBis.textContent = jsonObj["title"]
+    myDateNewsBis.textContent = jsonObj["date"]["day"] + ' ' + jsonObj["date"]["month"] + ' ' + jsonObj["date"]["year"];
+    myDateModaleBis.textContent = jsonObj["date"]["day"] + ' ' + jsonObj["date"]["month"] + ' ' + jsonObj["date"]["year"];
+    myContentNewsBis.textContent = jsonObj["content"][0];
+    myContentModaleBis.textContent = jsonObj["content"][0];
     myPictureBis.setAttribute("src", jsonObj["picture"]);
-    //remplace le contenu de mes variables par du contenu de mon json
-    myTitle.textContent = jsonObj["title"];
-    myDate.textContent = jsonObj["date"]["day"] + ' ' + jsonObj["date"]["month"] + ' ' + jsonObj["date"]["year"];
-    myContent.textContent = jsonObj["content"];
 }
+
+// Création excerpt
+function createExcerpt(){
+    let sentence = myExcerpt;
+    let output = document.querySelector("#contentNews");
+    if(sentence.lenghth>10){
+        sentence = sentence.substriing(0,10)+ "...";
+    }
+    output.innerHTML = sentence;
+}
+// // Création excerpt
+// const createExcerpt = (content, maxNumberOfWords, trailingIndicator = '...') => {
+//     const listOfWords = content.trim().split(' ');
+//     const truncatedContent = listOfWords.slice(0, maxNumberOfWords).join(' ');
+//     const excerpt = truncatedContent + trailingIndicator;
+//     const output = listOfWords.length > maxNumberOfWords ? excerpt : content;
+//     return output;
+// };
+// ==============================================================================================================
+
+
+
+
+// //ARTICLE 2
+// fetch("https://www.tbads.eu/greta/kercode/ajax/?article=3")
+//     .then(response => response.json())
+
+//     .then(function (response) {
+//         console.log(response)
+//         //mes fonctions;
+//         contenu(response);
+//     })
+//     .catch(function (msg) {
+//         console.log("Message d'erreur:", msg)
+//     });
+
+
+// // Injection json
+// function contenu(jsonObj) {
+//     //récupère mes éléments html
+//     // let myTitle = document.querySelector("#title");
+//     let myDateNews = document.querySelector("#dateNews");
+//     let myDateNewsBis = document.querySelector("#dateNewsBis");
+//     let myDateModale = document.querySelector("#dateModale");
+//     let myDateModaleBis = document.querySelector("#dateModaleBis");
+
+//     // injecte contenu json
+//     myDateNews.textContent = jsonObj["date"]["day"] + ' ' + jsonObj["date"]["month"] + ' ' + jsonObj["date"]["year"];
+//     myDateNewsBis.textContent = jsonObj["date"]["day"] + ' ' + jsonObj["date"]["month"] + ' ' + jsonObj["date"]["year"];
+//     myDateModale.textContent = jsonObj["date"]["day"] + ' ' + jsonObj["date"]["month"] + ' ' + jsonObj["date"]["year"];
+//     myDateModaleBis.textContent = jsonObj["date"]["day"] + ' ' + jsonObj["date"]["month"] + ' ' + jsonObj["date"]["year"];
+
+//     // myDateBis.textContent = jsonObj["date"]["day"] + ' ' + jsonObj["date"]["month"] + ' ' + jsonObj["date"]["year"];
+
+//     //     myDateModale.textContent = jsonObj["date"]["day"] + ' ' + jsonObj["date"]["month"] + ' ' + jsonObj["date"]["year"];
+//     // let myDateModale = document.querySelector("#dateModale");
+//     // let myContentNews = document.querySelector("#contentNews");
+//     // let myContentModale = document.querySelector("#contentModale");
+//     // let myPicture = document.querySelector("#picture");
+// }
