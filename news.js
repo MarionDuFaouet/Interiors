@@ -58,40 +58,16 @@ ajax.then(function (response) {
 // ==============================================================================================================
 
 //ARTICLE 2
-//ma promesse
-let ajaxBis = new Promise((resolve, reject) => {
-    // Création de l'objet XMLHttpRequest
-    // XMLHttpRequest est une api!!! Appelée plus couramment XHR
-    let request = new XMLHttpRequest();
-    //initialisation requête.
-    request.open("GET", "https://www.tbads.eu/greta/kercode/ajax/?article=3");
-    //répond en format json
-    request.responseType = "json";
-    //ajoute un écouteur d'événement à request
-    //,vérifie et...
-    request.addEventListener("load", function () {
-        if (request.status === 200) {
-            resolve(request.response);
-        } else {
-            reject("Erreur du serveur : " + request.status);
-        }
-    }, false);
-    request.addEventListener("error", function () {
-        reject("La requête ajax a échoué");
-    }, false);
-    // ...envoie la requête
-    request.send();
-});
+fetch("https://www.tbads.eu/greta/kercode/ajax/?article=3")
+    .then(response => response.json())
 
-
-//la méthode then est déclenchée par le résultat de vérif de ma fonction (if ou else)
-ajaxBis.then(function (response) {
-    console.log("Response : %o", response);
-    //appel de ma fonction
-    contenuBis(response);
-})
+    .then(function (response) {
+        console.log(response)
+        //mes fonctions;
+        contenuBis(response);
+    })
     .catch(function (msg) {
-        console.log("Message d'erreur :", msg)
+        console.log("Message d'erreur:", msg)
     });
 
 
