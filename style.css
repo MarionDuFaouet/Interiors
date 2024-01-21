@@ -70,8 +70,6 @@ p {
 #resa{
     background-image: url(images/fond-book.png);
     background-repeat: no-repeat;
-    /* background-position: ; */
-    /* background-size: ; */
 }
 
 #resaListe{
@@ -83,7 +81,6 @@ p {
 }
 
 @media (min-width: 768px) {
-
     #news1,
     #news2 {
         max-width: 100%;

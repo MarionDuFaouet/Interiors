@@ -48,12 +48,12 @@ function contenu(jsonObj) {
 
 
     // injection json
-    myTitle.textContent = jsonObj["title"]
-    myDateNews.textContent = jsonObj["date"]["day"] + ' ' + jsonObj["date"]["month"] + ' ' + jsonObj["date"]["year"];
-    myDateModale.textContent = jsonObj["date"]["day"] + ' ' + jsonObj["date"]["month"] + ' ' + jsonObj["date"]["year"];
+    myTitle.textContent = jsonObj.title;
+    myDateNews.textContent = jsonObj.date.day + ' ' + jsonObj.date.month + ' ' + jsonObj.date.year;
+    myDateModale.textContent = jsonObj.date.day + ' ' + jsonObj.date.month + ' ' + jsonObj.date.year;
     // myContentNews.textContent = jsonObj["content"][0];
-    myContentModale.textContent = jsonObj["content"];
-    myPicture.setAttribute("src", jsonObj["picture"]);
+    myContentModale.textContent = jsonObj.content;
+    myPicture.setAttribute("src", jsonObj.picture);
 
 }
 // ==============================================================================================================
@@ -66,6 +66,7 @@ fetch("https://www.tbads.eu/greta/kercode/ajax/?article=3")
         //mes fonctions;
         contenuBis(response);
         createExcerptBis(response);
+        // countWords(response);
     })
     .catch(function (msg) {
         console.log("Message d'erreur:", msg)
@@ -82,60 +83,66 @@ function contenuBis(jsonObj) {
     let myPictureBis = document.querySelector("#pictureBis");
 
     // injection json
-    myTitleBis.textContent = jsonObj["title"]
-    myDateNewsBis.textContent = jsonObj["date"]["day"] + ' ' + jsonObj["date"]["month"] + ' ' + jsonObj["date"]["year"];
-    myDateModaleBis.textContent = jsonObj["date"]["day"] + ' ' + jsonObj["date"]["month"] + ' ' + jsonObj["date"]["year"];
+    myTitleBis.textContent = jsonObj.title;
+    myDateNewsBis.textContent = jsonObj.date.day + ' ' + jsonObj.date.month + ' ' + jsonObj.date.year;
+    myDateModaleBis.textContent = jsonObj.date.day + ' ' + jsonObj.date.month + ' ' + jsonObj.date.year;
     // myContentNewsBis.textContent = jsonObj["content"][0];
-    myContentModaleBis.textContent = jsonObj["content"];
-    myPictureBis.setAttribute("src", jsonObj["picture"]);
+    myContentModaleBis.textContent = jsonObj.content;
+    myPictureBis.setAttribute("src", jsonObj.picture);
 }
 //=========================================================================================================================
 // Création excerpt
-// A retravailer demain : je dois anonymer cette fonction et l'appeler dans ma
-// requête ajax
 function createExcerpt(jsonObj) {
     let myExcerpt = document.querySelector("#contentNews");
-    let text = jsonObj["content"][0];
+    let text = jsonObj.content[0];
     text = text.substring(0, 60) + " ...";
     myExcerpt.textContent = text;
 }
 
+
 function createExcerptBis(jsonObj) {
     let myExcerptBis = document.querySelector("#contentNewsBis");
-    let text = jsonObj["content"][0];
+    let text = jsonObj.content[0];
     text = text.substring(0, 60) + " ...";
     myExcerptBis.textContent = text;
 }
 
-// Compte le nombre d'espace, et quand j'arrive à 20, 
-function countWords(jsonObj) {
-    let sentence = jsonObj["content"][0];
-    let space = ' ';
-    let count = 0;
-    let myExcerpt = [];
+// // Compte le nombre d'espace, et quand j'arrive à 20, 
+// function countWords(jsonObj) {
+//     let sentence = jsonObj["content"][0];
+//     let text = sentence.substring(0, 60);
+//     let space = ' ';
+//     let count = 0;
+//     let myExcerptBis = [];
 
-    for (let i = 0; i < sentence.length; i++) {
-        let currentChar = sentence.charAt(i);
-        if (currentChar === space)
-            count++;
-    }
-   
-    console.log(`voici mon extrait ${count}`);
-}
-//appel d'une fonction dans une autre
-// function go() {
+//     for (let i = 0; i < sentence.length; i++) {
+//         let currentChar = text.charAt(i);
 
-//     let number = parseInt(document.getElementById("number").value);
-//     let tab = [];
-//     if (isNaN(number) || (number < 5) || (number > 15)) {
-//         alert("Entrez un nombre compris entre 5 et 15");
-//         return;
-//     } else {
-//         for (let i = 1; i < number+1; i++) {
-//             tab.push(cube(i));
-//         }
+//         if (currentChar === space)
+//             count++;
+//         myExcerptBis.push(sentence)
 //     }
-//     displayArray(tab);
+//     console.log(`nombre de mot ${count}`);
+// }
+
+// // trouve le dernier espace
+// function lastSpace(jsonObj) {
+//     let sentence = jsonObj["content"][0];
+//     let spaceCount = 0;
+//     let myExcerpt = [];
+
+//     for (let i = 0; i <10; i++) {
+//         let currentChar = sentence.charAt(i);
+//         if (currentChar === ' '){
+//         myExcerpt.push(sentence.substring(0, currentChar));
+//         continue;
+//         }
+//             spaceCount++;
+//     }
+//     if (spaceCount === 10){
+    // myExcerpt.push(sentence.substring(0, ))
+//         return;
+//     }
 // }
 
 // ==============================================================================================================
