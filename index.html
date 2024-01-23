@@ -23,7 +23,6 @@
     <!-- partie titre -->
     <header id="bandeau" class="border-top border-5 border-secondary">
         <div class="d-sm-flex justify-content-center align-items-end text-center py-1">
-            <!-- comment aligner en bas tout ça? -->
             <p class="titreFlex text-capitalize small">magazine en ligne</p>
             <p class="titreFlex h1 text-uppercase px-2">interiors</p>
             <p class="titreFlex text-capitalize small">nos meilleurs idées</p>
@@ -36,12 +35,18 @@
             </button>
             <div class="collapse navbar-collapse justify-content-around " id="monMenu">
                 <ul class="navbar-nav text-uppercase">
-                    <li class="nav-item px-2"><a href="index.html" class="nav-link active fw-bold">O1.<span class="text-body">Accueil</span></a></li>
-                    <li class="nav-item px-2"><a href="#" class="nav-link">O2.<span class="text-body">à propos</span></a></li>
-                    <li class="nav-item px-2"><a href="#" class="nav-link">O3.<span class="text-body">services</span></a></li>
-                    <li class="nav-item px-2"><a href="#" class="nav-link">O4.<span class="text-body">galerie</span></a></li>
-                    <li class="nav-item px-2"><a href="#" class="nav-link">O5.<span class="text-body">les news</span></a></li>
-                    <li class="nav-item px-2"><a href="#" class="nav-link">O6.<span class="text-body">contact</span></a></li>
+                    <li class="nav-item px-2"><a href="index.html" class="nav-link active fw-bold">O1.<span
+                                class="text-body">Accueil</span></a></li>
+                    <li class="nav-item px-2"><a href="#" class="nav-link">O2.<span class="text-body">à
+                                propos</span></a></li>
+                    <li class="nav-item px-2"><a href="#" class="nav-link">O3.<span
+                                class="text-body">services</span></a></li>
+                    <li class="nav-item px-2"><a href="#" class="nav-link">O4.<span class="text-body">galerie</span></a>
+                    </li>
+                    <li class="nav-item px-2"><a href="#" class="nav-link">O5.<span class="text-body">les
+                                news</span></a></li>
+                    <li class="nav-item px-2"><a href="#" class="nav-link">O6.<span class="text-body">contact</span></a>
+                    </li>
                 </ul>
             </div>
         </nav>
@@ -118,11 +123,10 @@
             <aside id="bloc1">
                 <div id="titre2" class=" text-capitalize fw-bolder text-center py-3">dernières news</div>
                 <div class="d-flex flex-md-column justify-content-between">
-
                     <div id="news1" class="border border-3 bg-light p-3">
                         <p id="dateNews" class="date text-uppercase "></p>
                         <p class="lead content" id="contentNews"></p>
-                        
+
                         <a id="clicNews" href="#" class="text-uppercase text-decoration-none text-dark"
                             data-bs-toggle="modal" data-bs-target="#boiteModaleNews1">
                             <p class="text-end">+ d'infos</p>
@@ -137,12 +141,10 @@
                             <p class="text-end">+ d'infos</p>
                         </a>
                     </div>
-
                 </div>
             </aside>
 
             <!-- bloc de texte avec liens +résa, col 2 -->
-            <!-- pour afficher le même titre, texte et date, class css text-overflow: ellipsis ??? -->
             <aside id="bloc2" class="row py-4 justify-content-around">
                 <!-- bloc texte et liens -->
                 <div id="mots" class="col-7">
@@ -165,21 +167,22 @@
 
                 <!-- bloc réservation -->
                 <div id="resa" class="col-4 g-0 ">
-                    <!-- <img src="images/fond-book.png" class="img-fluid"> -->
                     <div id="resaTexte" class="">
                         <p class="text-uppercase fw-bold p-2">reservez <br> notre<br>catalogue</p>
                         <div class="px-3 my-5">
-                        <a id="clic" href="#" class="text-decoration-none text-light fw-bold small"
-                            data-bs-toggle="modal" data-bs-target="#boiteModale">Cliquez <br>ICI</a>
+                            <a id="clic" href="#" class="text-decoration-none text-light fw-bold small"
+                                data-bs-toggle="modal" data-bs-target="#boiteModale">Cliquez <br>ICI</a>
                         </div>
                     </div>
 
                     <div id="resaListe">
                         <ul class="list-unstyled mx-2">
-                            <li class="fw-bold py-2"><a href="#" class="text-decoration-none text-dark">Références</a></li>
+                            <li class="fw-bold py-2"><a href="#" class="text-decoration-none text-dark">Références</a>
+                            </li>
                             <li class="small"><a href="#" class="text-decoration-none text-dark">Expositions</a></li>
                             <li class="small"><a href="#" class="text-decoration-none text-dark">Hôtels</a></li>
-                            <li class="small"><a href="#" class="text-decoration-none text-dark">Restaurants et Bars</a></li>
+                            <li class="small"><a href="#" class="text-decoration-none text-dark">Restaurants et Bars</a>
+                            </li>
                             <li class="small"><a href="#" class="text-decoration-none text-dark">Revente</a></li>
                             <li class="small"><a href="#" class="text-decoration-none text-dark">Salons et Spas</a></li>
                         </ul>
@@ -233,7 +236,6 @@
         </div>
     </div>
 
-
     <!-- boites modales news1 -->
     <div class="modal" id="boiteModaleNews1">
         <div class="modal-dialog modal-lg">
@@ -249,12 +251,11 @@
                         <p id="dateModale" class=" text-uppercase"></p>
                         <p id="contentModale"></p>
                     </div>
-                        <img id="picture" src="" alt="décoration d'intérieur" class="w-50">
+                    <img id="picture" src="" alt="décoration d'intérieur" class="w-50">
                 </div>
             </div>
         </div>
     </div>
-
 
     <!-- boites modales news2 -->
     <div class="modal" id="boiteModaleNews2">
@@ -283,10 +284,3 @@
 </body>
 
 </html>
-
-<!-- X-Small 	None 	<576px
-            Small 	sm 	≥576px
-            Medium 	md 	≥768px
-            Large 	lg 	≥992px
-            Extra large 	xl 	≥1200px
-            Extra extra large 	xxl 	≥1400px -->
